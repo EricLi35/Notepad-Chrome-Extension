@@ -25,7 +25,7 @@ if(leadsFromLocalStorage) {
 }
 
 const tabs = [
-    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+    {url: "https://github.com/EricLi35"}
 ]
 
 tabBtn.addEventListener("click" , function() {
@@ -35,7 +35,6 @@ tabBtn.addEventListener("click" , function() {
     // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     // });
     
-    //ONLY WORKS ON CHROME!!!!!!!
     chrome.tabs.query({active: true , currentWindow: true} , function(tabs) {
         myLeads.push(tabs[0].url);
         localStorage.setItem("myLeads" , JSON.stringify(myLeads));
@@ -67,12 +66,6 @@ function render(leads) {
     // console.log("List item is " + listItems);
 }
 
-
-
-
-
-
-// OPEN THE ACTUAL INDEX.HTML FILE
 // localStorage.setItem("myName" , "Eric");
 // let name2 = localStorage.getItem("myName");
 // console.log("localStorage.getItem(myName) is " + name2); 
@@ -97,31 +90,3 @@ inputBtn.addEventListener("click" , function() {
     console.log("myLeads is " + localStorage.getItem("myLeads"));
     console.log("leadsFromLocalStorage is " + leadsFromLocalStorage);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const container = document.getElementById("container");
-// container.innerHTML = "<button onclick='buy()'>Buy!</button>";
-
-// function buy() {
-//     console.log("buy function has been called!");
-//     container.innerHTML += "<p>Thank you for buying!</p>"
-// }
-
-
